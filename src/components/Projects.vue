@@ -11,7 +11,9 @@
                 <br>
                 <span class="introText projectTitle">{{ project.title }}</span>
                 <span class="introText">{{ project.desc }}</span>
-                <a v-bind:href="project.link">GitHub</a>
+                <a class="project-link" v-bind:href="project.link">
+                  <i class="devicon-github-plain colored"></i>
+                </a>
             </slide>
         </carousel>
     </div>

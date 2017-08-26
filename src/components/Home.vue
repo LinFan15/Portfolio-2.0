@@ -1,6 +1,11 @@
 <template>
     <div id="paperTextContainer">
-        <p class="paperText">{{ home.text }}</p>
+      <div class="paperContent">
+        <img class="paperImg" src="/static/img/me.png">
+        <!--<span class="paperText">Yannick Kooistra<!--{{ home.text }}</span>-->
+        <p class="paperText">Welcome to my Portfolio website.<br>
+          Please use the buttons above to navigate.</p>
+      </div>
     </div>
 </template>
 
@@ -12,7 +17,9 @@ export default {
   name: 'home',
   data: function () {
     return {
-      home: {}
+      home: {
+        text: ''
+      }
     }
   },
   created: function () {
@@ -23,7 +30,7 @@ export default {
       axios.get('/api' + Router.currentRoute.path)
         .then(function (response) {
           this.pageData = response.data
-          this.homeText = this.pageData.text
+          this.home.text = this.pageData.text
         }.bind(this))
     }
   }

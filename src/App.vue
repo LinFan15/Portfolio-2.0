@@ -62,7 +62,7 @@ export default {
       menuItem1Desc: '',
       menuItem2Desc: '',
       menuItem3Desc: '',
-      transitionEnterName: 'animated fadeInUp',
+      transitionEnterName: 'animated fadeIn',
       transitionLeaveName: 'animated fadeOutDown'
     }
   },

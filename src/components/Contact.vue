@@ -1,12 +1,9 @@
 <template>
     <div id="paperTextContainer">
-        <div class="paperHeading">
-          <span>{{ contact.title }}</span>
-          <hr>
-        </div>
         <div class="paperContent">
-          <img id="faceImg" v-bind:src="contact.img">
-          <p class="paperText">{{ contact.text }}</p>
+          <img class="paperImg" src="/static/img/me.png">
+          <p class="paperText">Please send all inquiries to <a href="mailto:mail@yako.me">this email address</a>.</p>
+          </p>
         </div>
     </div>
 </template>

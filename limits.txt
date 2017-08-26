@@ -1,3 +1,2 @@
 Max characters paperText: 600;
-Max characters skillProgress: 10;
-
+Max skills:13;

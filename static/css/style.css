@@ -1,6 +1,6 @@
 html, body {
     background-color:whitesmoke;
-    height: 100%;
+    height: 100vh;
     width: auto;
     overflow-x: hidden;
 }
@@ -93,8 +93,8 @@ hr {
 }
 
 .menu-svg {
-    height: 80%;
-    width: auto;
+    height: auto;
+    width: 80%;
     pointer-events: none;
 }
 
@@ -114,7 +114,7 @@ hr {
     justify-content: center;
     border-style: solid;
     border-width: 0.25vw;
-    border-color: black; 
+    border-color: black;
     height: 90%;
     width: 70%;
     box-shadow: 0 4px 8px 0 darkslategrey, 0 6px 20px 0 slategrey;
@@ -162,12 +162,23 @@ hr {
 }
 
 .paperText {
-    height: 100%;
-    width: 100%;
     margin: 0px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+}
+
+.paperImg {
+    height: auto;
+    width: 11vw;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.paperIcon {
+    font-size: 2vw;
+    margin-right: 10px;
 }
 
 .projectTitle {
@@ -182,7 +193,7 @@ hr {
     color: black;
     margin-right: 1vw;
     margin-left: 1vw;
-    border: 1.5px solid black;
+    border: 0.5px solid black;
     border-radius: 50%;
     transition: background-color .1s ease-in-out, color .05s ease-in-out;
 }
@@ -209,15 +220,17 @@ hr {
 }
 
 .skillProgress {
-    width: 60%;
+    width: 94%;
+    background-color: white;
+    border: 1px solid black;
 }
 
-progress::-webkit-progress-bar {
-    color: darkslategrey;
+progress.skillProgress::-webkit-progress-bar {
+    background-color: white;
 }
 
-progress::-moz-progress-bar {
-    color: darkslategrey;
+progress.skillProgress::-webkit-progress-value {
+    background-color: black !important;
 }
 
 #carouselContainer {
@@ -253,7 +266,12 @@ progress::-moz-progress-bar {
 
 .project-svg {
     width: 15vw;
-    height: auto;
+    height: 15vw;
+}
+
+.project-link {
+    font-size: 2vw;
+    text-decoration: none;
 }
 
 #bottomPageContainer {
@@ -349,8 +367,21 @@ footer {
         font-size: 4.5vw;
         line-height: 6vw;
     }
+    .paperImg {
+      width: 19vw;
+    }
+    .paperIcon {
+      font-size: 4.5vw;
+    }
     .projectTitle {
         font-size: 6vw;
+    }
+    .project-svg {
+      width: 30vw;
+      height: 30vw;
+    }
+    .project-link {
+      font-size: 4.5vw;
     }
     .paperLink {
         line-height: 9vw;
@@ -385,8 +416,21 @@ footer {
         font-size: 1.8vw;
         line-height: 2.7vw;
     }
+    .paperImg {
+      width: 11vw;
+    }
+    .paperIcon {
+      font-size: 2vw;
+    }
     .projectTitle {
         font-size: 3vw;
+    }
+    .project-svg {
+      width: 15vw;
+      height: 15vw;
+    }
+    .project-link {
+      font-size: 2vw;
     }
     .paperLink {
         line-height: 4vw;

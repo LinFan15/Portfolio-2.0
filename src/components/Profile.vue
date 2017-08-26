@@ -1,12 +1,11 @@
 <template>
     <div id="paperTextContainer">
-        <div class="paperHeading">
-          <span>{{ profile.title }}</span>
-          <hr>
-        </div>
         <div class="paperContent">
-          <img id="faceImg" v-bind:src="profile.img">
-          <p class="paperText">{{ profile.text }}</p>
+          <img class="paperImg" src="/static/img/me.png">
+          <p class="paperText"><!--{{ profile.text }}-->Mijn naam is Yannick Kooistra en ik ben 19 jaar oud. Momenteel woon ik in Leeuwarden, waar ik informatica studeer aan de NHL.
+                                Al mijn hele leven ben ik geïnteresseerd geweest in computers en ik ben al sinds mijn 10e bezig met programmeren en websites bouwen.
+                                Daarnaast speel ik vaak videogames, luister ik veel naar muziek en ben ik recentelijk begonnen met mezelf piano leren te spelen.
+          </p>
         </div>
     </div>
 </template>

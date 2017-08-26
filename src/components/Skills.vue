@@ -1,25 +1,53 @@
 <template>
     <div id="paperTextContainer">
-        <div class="paperHeading">
-          <span>{{ skills.title }}</span>
-          <hr>
-        </div>
         <div class="paperContent">
           <div id="mainProgressContainer">
             <div class="progressContainer">
-              <span class="introText">HTML/CSS</span>
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <span class="introText">HTML/CSS</span>
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <span class="introText">HTML/CSS</span>
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <span class="introText">C#</span>
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <span class="introText">HTML/CSS</span>
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
+            </div>
+            <div class="progressContainer">
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
+            </div>
+            <div class="progressContainer">
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
+            </div>
+            <div class="progressContainer">
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
+            </div>
+            <div class="progressContainer">
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
+            </div>
+            <div class="progressContainer">
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
+            </div>
+            <div class="progressContainer">
+              <i class="devicon-html5-plain paperIcon"></i>
+              <progress class="skillProgress" value="22" max="100"></progress>
+            </div>
+            <div class="progressContainer">
+              <i class="devicon-html5-plain paperIcon"></i>
               <progress class="skillProgress" value="22" max="100"></progress>
             </div>
           </div>
