@@ -228,6 +228,7 @@ hr {
 
 .skillProgress {
     width: 94%;
+    color: black;
     background-color: white;
     border: 1px solid black;
 }
@@ -238,6 +239,10 @@ progress.skillProgress::-webkit-progress-bar {
 
 progress.skillProgress::-webkit-progress-value {
     background-color: black !important;
+}
+
+progress.skillProgress::-moz-progress-bar {
+  background-color: black;
 }
 
 #carouselContainer {
