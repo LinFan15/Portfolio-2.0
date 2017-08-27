@@ -50,9 +50,6 @@
 </template>
 
 <script>
-import router from './router'
-import axios from 'axios'
-
 export default {
   name: 'app',
   data: function () {
@@ -67,8 +64,10 @@ export default {
     }
   },
   created: function () {
-    if (router.currentRoute.path.substring(1, 3) === 'en' || router.currentRoute.path.substring(1, 3) === 'nl') {
-      this.langChosen = true
+    if (this.$router.currentRoute.path.substring(1, 3) === 'en' || this.$router.currentRoute.path.substring(1, 3) === 'nl') {
+      this.chooseLang(this.$router.currentRoute.path.substring(1, 3), false)
+    } else {
+      this.$router.push({name: 'pageNotFound'})
     }
   },
   watch: {
@@ -94,21 +93,27 @@ export default {
   },
   methods: {
     onEnterAnimationEnd: function () {
-      if (router.currentRoute.path === '/') {
+      if (this.$router.currentRoute.name === 'intro') {
         setTimeout(function () {
-          router.push('welcome')
-        }, 800)
+          this.$router.push('welcome')
+        }.bind(this), 800)
       }
     },
-    chooseLang: function (lang) {
-      axios.get('/api/' + lang + '/menu')
-        .then(function (response) {
-          var data = response.data
-          this.menuItem1Desc = data.menuItem1Desc
-          this.menuItem2Desc = data.menuItem2Desc
-          this.menuItem3Desc = data.menuItem3Desc
-        }.bind(this))
-      router.push(lang + '/home')
+    chooseLang: function (lang, fromWelcome) {
+      if (lang === 'en') {
+        this.menuItem1Desc = 'About Me'
+        this.menuItem2Desc = 'Skills'
+        this.menuItem3Desc = 'Projects'
+      } else if (lang === 'nl') {
+        this.menuItem1Desc = 'Over Mij'
+        this.menuItem2Desc = 'Vaardigheden'
+        this.menuItem3Desc = 'Projecten'
+      }
+      this.langChosen = true
+
+      if (fromWelcome) {
+        this.$router.push('/' + lang + '/home')
+      }
     }
   }
 }

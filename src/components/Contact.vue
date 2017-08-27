@@ -1,34 +1,32 @@
 <template>
     <div id="paperTextContainer">
         <div class="paperContent">
-          <img class="paperImg" src="/static/img/me.png">
-          <p class="paperText">Please send all inquiries to <a href="mailto:mail@yako.me">this email address</a>.</p>
+          <img src="/static/img/e-mail.svg" class="paperImg"></img>
+          <p class="paperText">{{ contact.mainText }} <a href="mailto:mail@yako.me" class="link">{{ contact.linkText }}</a>.</p>
           </p>
         </div>
     </div>
 </template>
 
 <script>
-import Router from '../router'
-import axios from 'axios'
-
 export default {
   name: 'contact',
+  props: ['lang'],
   data: function () {
     return {
-      contact: {}
+      contact: {
+        mainText: '',
+        linkText: ''
+      }
     }
   },
   created: function () {
-    this.fetchData()
-  },
-  methods: {
-    fetchData: function () {
-      axios.get('/api' + Router.currentRoute.path)
-        .then(function (response) {
-          this.pageData = response.data
-          this.contactText = this.pageData.text
-        }.bind(this))
+    if (this.lang === 'en') {
+      this.contact.mainText = 'Please send all inquiries to'
+      this.contact.linkText = 'this email address'
+    } else if (this.lang === 'nl') {
+      this.contact.mainText = 'U kunt contact opnemen via'
+      this.contact.linkText = 'dit e-mailadres'
     }
   }
 }

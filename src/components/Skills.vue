@@ -4,51 +4,43 @@
           <div id="mainProgressContainer">
             <div class="progressContainer">
               <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <progress class="skillProgress" value="95" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-css3-plain paperIcon"></i>
+              <progress class="skillProgress" value="90" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-javascript-plain paperIcon"></i>
+              <progress class="skillProgress" value="90" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-mysql-plain paperIcon"></i>
+              <progress class="skillProgress" value="80" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-csharp-plain paperIcon"></i>
+              <progress class="skillProgress" value="90" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-java-plain paperIcon"></i>
+              <progress class="skillProgress" value="70" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-python-plain paperIcon"></i>
+              <progress class="skillProgress" value="85" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-android-plain paperIcon"></i>
+              <progress class="skillProgress" value="70" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-angularjs-plain paperIcon"></i>
+              <progress class="skillProgress" value="75" max="100"></progress>
             </div>
             <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
-            </div>
-            <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
-            </div>
-            <div class="progressContainer">
-              <i class="devicon-html5-plain paperIcon"></i>
-              <progress class="skillProgress" value="22" max="100"></progress>
+              <i class="devicon-vuejs-plain paperIcon"></i>
+              <progress class="skillProgress" value="85" max="100"></progress>
             </div>
           </div>
         </div>
@@ -56,27 +48,7 @@
 </template>
 
 <script>
-import Router from '../router'
-import axios from 'axios'
-
 export default {
-  name: 'home',
-  data: function () {
-    return {
-      skills: {}
-    }
-  },
-  created: function () {
-    this.fetchData()
-  },
-  methods: {
-    fetchData: function () {
-      axios.get('/api' + Router.currentRoute.path)
-        .then(function (response) {
-          this.pageData = response.data
-          this.homeText = this.pageData.text
-        }.bind(this))
-    }
-  }
+  name: 'skills'
 }
 </script>

@@ -13,7 +13,7 @@ export default {
   name: 'welcome',
   methods: {
     chooseLang: function (lang) {
-      this.$emit('langChosen', lang)
+      this.$emit('langChosen', lang, true)
     }
   }
 }

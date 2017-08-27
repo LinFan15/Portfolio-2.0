@@ -5,10 +5,9 @@
           v-bind:autoplayTimeout="carousel.autoplayTimeout"
           v-bind:autoplayHoverPause="carousel.autoplayHoverPause"
           v-bind:perPage="carousel.perPage"
-          v-bind:scrollPerPage="carousel.scrollPerPage">
+          v-bind:scrollPerPage="carousel.scrollPerPage"
+          v-bind:loop="carousel.loop">
             <slide class="carousel-cell" v-for="project in projectsArray" v-bind:key="project.id">
-                <object type="image/svg+xml" v-bind:data="project.img"  class="project-svg"></object>
-                <br>
                 <span class="introText projectTitle">{{ project.title }}</span>
                 <span class="introText">{{ project.desc }}</span>
                 <a class="project-link" v-bind:href="project.link">
@@ -20,31 +19,30 @@
 </template>
 
 <script>
-import Router from '../router'
-import axios from 'axios'
 import { Carousel, Slide } from 'vue-carousel'
 
 export default {
   name: 'projects',
+  props: ['lang'],
   components: {
     Carousel,
     Slide
   },
   data: function () {
     return {
-      projectsArray: [{id: 1, title: 'Project 1', desc: 'A Project', link: 'http://tweakers.net'}, {id: 1, title: 'Project 2', desc: 'A Project', link: 'http://xgn.nl'}, {id: 3, title: 'Project 3', desc: 'A Project', link: 'http://google.com'}],
-      carousel: {autoplay: true, autoplayTimeout: 3000, autoplayHoverPause: true, perPage: 1, scrollPerPage: true}
+      projectsArray: [],
+      carousel: {autoplay: true, autoplayTimeout: 3000, autoplayHoverPause: true, perPage: 1, scrollPerPage: true, loop: true}
     }
   },
   created: function () {
-    this.fetchData()
-  },
-  methods: {
-    fetchData: function () {
-      axios.get('/api' + Router.currentRoute.path)
-        .then(function (response) {
-          // this.projectsArray = response.data
-        })
+    if (this.lang === 'nl') {
+      this.projectsArray = [{id: 1, title: 'Portfolio Website', desc: 'Deze website.', link: 'https://github.com/LinFan15/Portfolio'},
+                        {id: 1, title: 'Sudoku Solver', desc: 'Lost sudokus van verschillende grootte op met behulp van een backtracking algoritme.', link: 'https://github.com/LinFan15/SudokuSolver'},
+                        {id: 3, title: 'Arduino Web Server', desc: 'Een simpele HTTP web server implementatie om GET en POST requests te kunnen verwerken op een arduino.', link: 'https://github.com/LinFan15/ArduinoWebServer'}]
+    } else {
+      this.projectsArray = [{id: 1, title: 'Portfolio Website', desc: 'This website.', link: 'https://github.com/LinFan15/Portfolio'},
+                        {id: 1, title: 'Sudoku Solver', desc: 'Solves sudokus of varying sizes with the help of a backtracking algorithm.', link: 'https://github.com/LinFan15/SudokuSolver'},
+                        {id: 3, title: 'Arduino Web Server', desc: 'A simple HTTP webserver implementation to handle GET and POST requests on an arduino.', link: 'https://github.com/LinFan15/ArduinoWebServer'}]
     }
   }
 }

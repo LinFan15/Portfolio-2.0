@@ -171,9 +171,12 @@ hr {
 .paperImg {
     height: auto;
     width: 11vw;
+    margin-bottom: 8px;
+}
+
+.profileImg {
     border: 1px solid black;
     border-radius: 50%;
-    margin-bottom: 8px;
 }
 
 .paperIcon {
@@ -183,6 +186,10 @@ hr {
 
 .projectTitle {
     font-weight: 400;
+}
+
+.link {
+    color: black;
 }
 
 .paperLink {
