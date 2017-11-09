@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Intro from '@/components/Intro'
 import Welcome from '@/components/Welcome'
-import PageNotFound from '@/components/PageNotFound'
+//import PageNotFound from '@/components/PageNotFound'
 import Home from '@/components/Home'
 import Profile from '@/components/Profile'
 import Skills from '@/components/Skills'
@@ -59,8 +59,8 @@ export default new Router({
       name: 'disclaimer',
       props: true,
       component: Disclaimer
-    },
-    {
+    }
+    /*{
       path: '/:lang/*',
       name: 'pageNotFound-lang',
       props: true,
@@ -70,6 +70,6 @@ export default new Router({
       path: '/*',
       name: 'pageNotFound',
       component: PageNotFound
-    }
+    }*/
   ]
 })
