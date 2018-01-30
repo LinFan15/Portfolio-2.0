@@ -37,12 +37,14 @@ export default {
   created: function () {
     if (this.lang === 'nl') {
       this.projectsArray = [{id: 1, title: 'Portfolio Website', desc: 'Deze website.', link: 'https://github.com/LinFan15/Portfolio'},
-                        {id: 1, title: 'Sudoku Solver', desc: 'Lost sudokus van verschillende grootte op met behulp van een backtracking algoritme.', link: 'https://github.com/LinFan15/SudokuSolver'},
-                        {id: 3, title: 'Arduino Web Server', desc: 'Een simpele HTTP web server implementatie om GET en POST requests te kunnen verwerken op een arduino.', link: 'https://github.com/LinFan15/ArduinoWebServer'}]
+                        {id: 2, title: 'Automatisch Toetsen (P3P)', desc: 'Webapp gebouwd op Angular 4.x en VMWare Clarity voor het automatisch genereren van toetsen op basis van een pool met door de gebruiker gedefinieerde toetsvragen.', link: 'https://github.com/LinFan15/Automatisch_Toetsen/tree/Public-Release'},
+                        {id: 3, title: 'Sudoku Solver', desc: 'Lost sudokus van verschillende grootte op met behulp van een backtracking algoritme.', link: 'https://github.com/LinFan15/SudokuSolver'},
+                        {id: 4, title: 'Arduino Web Server', desc: 'Een simpele HTTP web server implementatie om GET en POST requests te kunnen verwerken op een arduino.', link: 'https://github.com/LinFan15/ArduinoWebServer'}]
     } else {
       this.projectsArray = [{id: 1, title: 'Portfolio Website', desc: 'This website.', link: 'https://github.com/LinFan15/Portfolio'},
-                        {id: 1, title: 'Sudoku Solver', desc: 'Solves sudokus of varying sizes with the help of a backtracking algorithm.', link: 'https://github.com/LinFan15/SudokuSolver'},
-                        {id: 3, title: 'Arduino Web Server', desc: 'A simple HTTP webserver implementation to handle GET and POST requests on an arduino.', link: 'https://github.com/LinFan15/ArduinoWebServer'}]
+                        {id: 2, title: 'Automatic Test Generation (P3P)', desc: 'Webapp built on Angular 4.x and VMWare Clarity which automatically generates tests from a pool of user-defined questions.', link: 'https://github.com/LinFan15/Automatisch_Toetsen/tree/Public-Release'},
+                        {id: 3, title: 'Sudoku Solver', desc: 'Solves sudokus of varying sizes with the help of a backtracking algorithm.', link: 'https://github.com/LinFan15/SudokuSolver'},
+                        {id: 4, title: 'Arduino Web Server', desc: 'A simple HTTP webserver implementation to handle GET and POST requests on an arduino.', link: 'https://github.com/LinFan15/ArduinoWebServer'}]
     }
   }
 }
